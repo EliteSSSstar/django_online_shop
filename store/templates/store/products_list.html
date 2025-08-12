@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% extends 'store/base.html' %}
+    {% block title %}Product List{% endblock %}
+</head>
+<body>
+{% block content %}
+<h1>Products</h1>
+
+<ul>
+    {% for product in products %}
+    <li>
+        <h3>{{ product.name }} - ${{ product.price }}</h3>
+        <p>{{ product.description }}</p>
+        {% if product.image_filename %}
+        <img src="/imag/product_images/{{ product.image_filename }}" alt="{{ product.name }}" width="150" />
+
+        {% endif %}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+</body>
+</html>

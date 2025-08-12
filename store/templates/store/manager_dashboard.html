@@ -1,0 +1,9 @@
+{% extends "store/base.html" %}
+
+{% block content %}
+<h1>Manager Dashboard</h1>
+<p>Welcome, {{ user.username }}!</p>
+
+<a href="{% url 'manage_users' %}" class="btn btn-primary">View Users</a>
+
+{% endblock %}
