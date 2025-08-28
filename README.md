@@ -12,9 +12,9 @@ This project allows users to:
 
 ### Assigned Use Case
 
-> ** ERD**  
+> ERD  
  
-> ** UseCase**
+> UseCase
 
 ##  Roles Implemented
 
