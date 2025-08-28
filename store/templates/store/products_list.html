@@ -15,8 +15,12 @@
         <p>{{ product.description }}</p>
         {% if product.image_filename %}
         <img src="/imag/product_images/{{ product.image_filename }}" alt="{{ product.name }}" width="150" />
-
         {% endif %}}
+        <!-- Button for adding to cart -->
+        <form action="{% url 'add_to_cart' product.id %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+        </form>
     </li>
     {% endfor %}
 </ul>

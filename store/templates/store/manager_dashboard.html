@@ -4,6 +4,18 @@
 <h1>Manager Dashboard</h1>
 <p>Welcome, {{ user.username }}!</p>
 
-<a href="{% url 'manage_users' %}" class="btn btn-primary">View Users</a>
+<!-- Create Staff Account Form -->
+<h2>Create Staff Account</h2>
+<form method="post" action="{% url 'create_staff' %}">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit" class="btn btn-success">Create Staff</button>
+</form>
+
+<!-- User Management Links -->
+<h2>Manage Users</h2>
+<a href="{% url 'user_list' %}" class="btn btn-primary">View All Users</a>
 
 {% endblock %}
