@@ -23,7 +23,7 @@ This project allows users to:
 - Store Staff
 - Customer
 
-##  Tech Stack
+##  Tech Used:
 
 - **Backend:** Python, Django
 - **Frontend:** HTML, CSS, Bootstrap
